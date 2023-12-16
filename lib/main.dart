@@ -19,38 +19,34 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                color: Colors.cyan,
-                child: Text('one'),
-              ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              color: Colors.cyan,
+              child: Text('one'),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                color: Colors.pinkAccent,
-                child: Text('two'),
-              ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              color: Colors.pinkAccent,
+              child: Text('two'),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
+          ),
+          Expanded(
+              flex: 1,
+              child:Container(
                 padding: EdgeInsets.all(20.0),
                 color: Colors.amber,
-                child: Text('three'),
-              ),
-            ),
-          ],
-        ),
+                child: Text('three'),)
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Text('click'),
